@@ -71,8 +71,7 @@ const ClinicHighlights = () => {
         <InViewWrapper
           as="div"
           styles="duration-700 ease-in-out p-8 bg-teal-600 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-e-full hidden lg:w-[48vw] lg:block duration-1000 ease-in-out"
-          inViewStyles="translate-x-0"
-          outOfViewStyles="-translate-x-[20%]"
+          inViewStyles="animate-to-right"
         >
           <Image
             src="/clinic-highlights.jpg"
@@ -91,8 +90,7 @@ const ClinicHighlights = () => {
                 styles={`flex flex-col sm:flex-row gap-1 sm:gap-5 sm:items-center duration-700 delay-[${
                   (index + 1) * 100
                 }]`}
-                inViewStyles="translate-x-0"
-                outOfViewStyles="translate-x-[8%]"
+                inViewStyles="animate-to-left"
               >
                 <div className={`w-fit h-fit p-2 lg:p-3 rounded-full ${highlight.background}`}>
                   <Image
