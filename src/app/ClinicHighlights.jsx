@@ -57,13 +57,20 @@ const highlights = [
 const ClinicHighlights = () => {
   return (
     <>
-      <h1 className="text-4xl font-semibold text-center text-slate-700 mb-12">
-        Clinic Highlights
-      </h1>
-      <div className="grid grid-cols-2 gap-[10%] items-center">
+      <InViewWrapper
+        as="div"
+        styles="relative whitespace-nowrap duration-700 ease-in-out mb-10"
+        inViewStyles="top-0"
+        outOfViewStyles="top-20"
+      >
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-slate-700">
+          Clinic Highlights
+        </h1>
+      </InViewWrapper>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-[10%] items-center">
         <InViewWrapper
           as="div"
-          styles="duration-700 ease-in-out p-8 bg-teal-600 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-e-full w-[48vw] duration-1000 ease-in-out"
+          styles="duration-700 ease-in-out p-8 bg-teal-600 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-e-full hidden lg:w-[48vw] lg:block duration-1000 ease-in-out"
           inViewStyles="translate-x-0"
           outOfViewStyles="-translate-x-[20%]"
         >
@@ -75,28 +82,28 @@ const ClinicHighlights = () => {
             className="rounded-full w-full h-full"
           />
         </InViewWrapper>
-        <ul className="space-y-20 duration-700 ease-in-out">
+        <ul className="space-y-20 duration-700 ease-in-out px-5">
           {highlights.map((highlight, index) => {
             return (
               <InViewWrapper
                 as="li"
                 key={index}
-                styles={`flex gap-5 items-center duration-700 delay-[${
+                styles={`flex flex-col sm:flex-row gap-1 sm:gap-5 sm:items-center duration-700 delay-[${
                   (index + 1) * 100
                 }]`}
                 inViewStyles="translate-x-0"
-                outOfViewStyles="translate-x-[10%]"
+                outOfViewStyles="translate-x-[8%]"
               >
-                <div className={`p-4 rounded-full ${highlight.background}`}>
+                <div className={`w-fit h-fit p-2 lg:p-3 rounded-full ${highlight.background}`}>
                   <Image
                     src={highlight.imageSrc}
                     alt={highlight.imageAlt}
                     width={highlight.imageWidth}
                     height={highlight.imageHeight}
-                    className="w-16 h-16"
+                    className="min-w-[60px] max-w-[60px] max-h-[60px] min-h-[60px]"
                   />
                 </div>
-                <div className="w-[25vw]">
+                <div className=" lg:w-[30vw]">
                   <h2 className="text-2xl font-semibold">{highlight.title}</h2>
                   <p>{highlight.description}</p>
                 </div>

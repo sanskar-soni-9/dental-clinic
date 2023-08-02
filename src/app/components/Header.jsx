@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header>
+    <header className="overflow-hidden">
       <nav>
         <ul className="absolute top-0 left-0 right-0 z-50 flex gap-12 justify-end bg-teal-600 text-teal-50 py-8 px-8 text-lg font-medium">
           <li className="flex flex-col items-center justify-center pt-1">

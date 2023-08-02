@@ -20,7 +20,7 @@ const CopyTextToClipboard = ({ text, styles }) => {
         ""
       ) : (
         <p
-          className="group-hover/clipboard:block hidden bg-teal-600 rounded-full text-teal-50 px-2 py-1 cursor-pointer"
+          className="group-hover/clipboard:block hidden bg-teal-600 rounded-full text-teal-50 px-2 py-1 cursor-pointer text-xs font-semibold"
           onClick={() => {
             setIsCopied(true);
             navigator.clipboard.writeText(text);
