@@ -1,5 +1,5 @@
 import Image from "next/image";
-import InViewWrapper from "./components/InViewWrapper";
+import InViewWrapper from "./InViewWrapper";
 
 const highlights = [
   {
@@ -81,34 +81,36 @@ const ClinicHighlights = () => {
             className="rounded-full w-full h-full"
           />
         </InViewWrapper>
-        <ul className="space-y-20 duration-700 ease-in-out px-5">
+        <InViewWrapper
+          as="ul"
+          styles="space-y-8 sm:space-y-10 xl:space-y-16 duration-1000 ease-in-out px-5 sm:w-[85vw] mx-auto lg:w-full"
+          inViewStyles="translate-x-0"
+          outOfViewStyles="translate-x-[100px]"
+        >
           {highlights.map((highlight, index) => {
             return (
-              <InViewWrapper
-                as="li"
-                key={index}
-                styles={`flex flex-col sm:flex-row gap-1 sm:gap-5 sm:items-center duration-700 delay-[${
-                  (index + 1) * 100
-                }]`}
-                inViewStyles="animate-to-left"
-              >
-                <div className={`w-fit h-fit p-2 lg:p-3 rounded-full ${highlight.background}`}>
+              <li key={index} className="flex gap-2 sm:gap-5 items-center">
+                <div
+                  className={`w-fit h-fit p-2 lg:p-3 rounded-full ${highlight.background}`}
+                >
                   <Image
                     src={highlight.imageSrc}
                     alt={highlight.imageAlt}
                     width={highlight.imageWidth}
                     height={highlight.imageHeight}
-                    className="min-w-[60px] max-w-[60px] max-h-[60px] min-h-[60px]"
+                    className="min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] sm:min-w-[60px] sm:max-w-[60px] sm:max-h-[60px] sm:min-h-[60px]"
                   />
                 </div>
-                <div className=" lg:w-[30vw]">
-                  <h2 className="text-2xl font-semibold">{highlight.title}</h2>
-                  <p>{highlight.description}</p>
+                <div className="lg:w-[30vw]">
+                  <h2 className="text-base sm:text-lg font-semibold">
+                    {highlight.title}
+                  </h2>
+                  <p className="text-xs sm:text-sm">{highlight.description}</p>
                 </div>
-              </InViewWrapper>
+              </li>
             );
           })}
-        </ul>
+        </InViewWrapper>
       </div>
     </>
   );
