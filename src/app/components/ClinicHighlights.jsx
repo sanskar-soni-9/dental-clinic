@@ -81,15 +81,17 @@ const ClinicHighlights = () => {
             className="rounded-full w-full h-full"
           />
         </InViewWrapper>
-        <InViewWrapper
-          as="ul"
-          styles="space-y-8 sm:space-y-10 xl:space-y-16 duration-1000 ease-in-out px-5 sm:w-[85vw] mx-auto lg:w-full"
-          inViewStyles="translate-x-0"
-          outOfViewStyles="translate-x-[100px]"
-        >
+        <ul className="space-y-8 sm:space-y-10 xl:space-y-16 px-5 sm:w-[85vw] mx-auto lg:w-full">
           {highlights.map((highlight, index) => {
             return (
-              <li key={index} className="flex gap-2 sm:gap-5 items-center">
+              <InViewWrapper
+                as="li"
+                key={index}
+                styles="flex gap-2 sm:gap-5 items-center duration-700 ease-in-out"
+                inViewStyles="translate-y-0"
+                outOfViewStyles="translate-y-[50px]"
+                rootMargin="50px 0px 50px 0px"
+              >
                 <div
                   className={`w-fit h-fit p-2 lg:p-3 rounded-full ${highlight.background}`}
                 >
@@ -107,10 +109,10 @@ const ClinicHighlights = () => {
                   </h2>
                   <p className="text-xs sm:text-sm">{highlight.description}</p>
                 </div>
-              </li>
+              </InViewWrapper>
             );
           })}
-        </InViewWrapper>
+        </ul>
       </div>
     </>
   );
