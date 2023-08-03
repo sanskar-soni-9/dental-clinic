@@ -22,7 +22,7 @@ const availableHours = [
 const services = [
   { service: "Teeth whitening" },
   { service: "Dental Implants" },
-  { service: "Digital X-ray" },
+  { service: "Digital Dental X-ray" },
   { service: "Root canal treatment" },
   { service: "Maxillofacial surgeries" },
   { service: "Oral prophylaxis" },
@@ -33,7 +33,7 @@ const services = [
   { service: "Teeth reshaping" },
   { service: "Laser dentistry" },
   { service: "Orthodontic Treatment" },
-  { service: "Moth guards" },
+  { service: "Mouth guards" },
   { service: "Online Follow-up" },
 ];
 

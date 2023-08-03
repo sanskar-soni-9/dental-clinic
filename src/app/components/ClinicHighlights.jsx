@@ -62,6 +62,7 @@ const ClinicHighlights = () => {
         styles="relative whitespace-nowrap duration-700 ease-in-out mb-10"
         inViewStyles="top-0"
         outOfViewStyles="top-20"
+        rootMargin="0px 0px 200px 0px"
       >
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-slate-700">
           Clinic Highlights
@@ -87,7 +88,7 @@ const ClinicHighlights = () => {
               <InViewWrapper
                 as="li"
                 key={index}
-                styles="flex gap-2 sm:gap-5 items-center duration-700 ease-in-out"
+                styles="flex gap-2 sm:gap-5 sm:items-center duration-700 ease-in-out"
                 inViewStyles="translate-y-0"
                 outOfViewStyles="translate-y-[50px]"
                 rootMargin="50px 0px 50px 0px"
@@ -100,7 +101,7 @@ const ClinicHighlights = () => {
                     alt={highlight.imageAlt}
                     width={highlight.imageWidth}
                     height={highlight.imageHeight}
-                    className="min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] sm:min-w-[60px] sm:max-w-[60px] sm:max-h-[60px] sm:min-h-[60px]"
+                    className="min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] sm:min-w-[40px] sm:max-w-[40px] sm:max-h-[40px] sm:min-h-[40px] lg:min-w-[60px] lg:max-w-[60px] lg:max-h-[60px] lg:min-h-[60px]"
                   />
                 </div>
                 <div className="lg:w-[30vw]">

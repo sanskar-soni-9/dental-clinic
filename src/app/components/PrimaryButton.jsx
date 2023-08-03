@@ -17,14 +17,14 @@ const PrimaryButton = ({ text, handleClick, href, isLink, isDark }) => {
       {isLink ? (
         <Link
           href={href}
-          className="inline-block px-4 py-3 w-fit rounded-lg font-medium relative"
+          className="inline-block px-3 sm:px-4 py-2 sm:py-3 w-fit rounded-lg font-medium relative"
         >
           {text}
         </Link>
       ) : (
         <button
           onClick={handleClick}
-          className="inline-block px-4 py-3 w-fit rounded-lg font-medium relative"
+          className="inline-block px-3 sm:px-4 py-2 sm:py-3 w-fit rounded-lg font-medium relative"
         >
           {text}
         </button>

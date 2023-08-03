@@ -1,10 +1,15 @@
 import Link from "next/link";
+import { BiMenuAltRight } from "react-icons/bi";
 
 const Header = () => {
   return (
-    <header className="overflow-hidden">
-      <nav>
-        <ul className="absolute top-0 left-0 right-0 z-50 flex gap-12 justify-end bg-teal-600 text-teal-50 py-8 px-8 text-lg font-medium">
+    <header className="overflow-hidden bg-teal-600 text-teal-50 py-6 px-4 text-lg font-medium flex justify-between">
+      <div />
+      <div className="md:hidden bg-teal-50/40 rounded-lg p-1 cursor-pointer">
+        <BiMenuAltRight className="w-7 h-7" />
+      </div>
+      <nav className="hidden md:block">
+        <ul className="flex z-50 gap-12 justify-end">
           <li className="flex flex-col items-center justify-center pt-1">
             <Link href="/" className="peer">
               Home

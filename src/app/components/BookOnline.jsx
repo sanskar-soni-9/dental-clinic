@@ -17,7 +17,7 @@ const BookOnline = () => {
       />
       {isOpen ? (
         <div
-          className="absolute top-0 right-0 left-0 h-screen overflow-y-hidden z-50 bg-slate-900/60 flex items-center justify-center"
+          className="absolute top-0 right-0 left-0 h-screen overflow-y-hidden z-50 bg-gray-900 sm:bg-slate-900/60 flex sm:items-center justify-center"
           onClick={() => {
             setIsOpen(false);
             document.body.classList.remove("overflow-y-hidden");
