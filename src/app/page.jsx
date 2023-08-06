@@ -1,7 +1,7 @@
-import ClinicHighlights from "./components/ClinicHighlights";
-import InViewWrapper from "./components/InViewWrapper";
-import BookOnline from "./components/BookOnline";
-import Map from "./components/Map";
+import ClinicHighlights from "./_components/ClinicHighlights";
+import InViewWrapper from "./_components/InViewWrapper";
+import BookOnline from "./_components/BookOnline";
+import Map from "./_components/Map";
 
 const Home = () => {
   return (

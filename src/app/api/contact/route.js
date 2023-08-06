@@ -14,7 +14,7 @@ const transporter = createTransport({
 
 export const POST = async (req) => {
   try {
-    const { firstName, lastName, email, mobNumber, message } = await req.json();
+    const { firstName, lastName, email, contactNumber, message } = await req.json();
 
     await new Promise((resolve, reject) => {
       transporter.sendMail(
@@ -23,7 +23,7 @@ export const POST = async (req) => {
           to: "drasthasoni111@gmail.com",
           subject: "Online Booking",
           text: `Name: ${firstName} ${lastName}
-Contact number: ${mobNumber} 
+Contact number: ${contactNumber} 
 Email ID: ${email}
 
 ${message}`,

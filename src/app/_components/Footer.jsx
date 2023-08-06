@@ -8,6 +8,7 @@ import {
 import { FaPhoneFlip, FaInstagram } from "react-icons/fa6";
 import CopyTextToClipboard from "./CopyTextToClipboard";
 import InViewWrapper from "./InViewWrapper";
+import BookOnline from "./BookOnline";
 
 const availableHours = [
   { day: "Sunday", time: "11am - 2pm" },
@@ -20,20 +21,20 @@ const availableHours = [
 ];
 
 const services = [
-  { service: "Teeth whitening" },
+  { service: "Teeth Whitening" },
   { service: "Dental Implants" },
   { service: "Digital Dental X-ray" },
-  { service: "Root canal treatment" },
-  { service: "Maxillofacial surgeries" },
-  { service: "Oral prophylaxis" },
+  { service: "Root Canal Treatment" },
+  { service: "Maxillofacial Surgeries" },
+  { service: "Oral Prophylaxis" },
   { service: "Crown / Bridges" },
   { service: "Veneers" },
   { service: "Dental Restoration" },
   { service: "Denture" },
-  { service: "Teeth reshaping" },
-  { service: "Laser dentistry" },
+  { service: "Teeth Reshaping" },
+  { service: "Laser Dentistry" },
   { service: "Orthodontic Treatment" },
-  { service: "Mouth guards" },
+  { service: "Mouth Guards" },
   { service: "Online Follow-up" },
 ];
 
@@ -43,6 +44,7 @@ const Footer = () => {
       <div className="grid w-screen grid-cols-1 md:grid-cols-2  xl:grid-cols-4 gap-8 px-5 pb-4">
         <InViewWrapper
           as="div"
+          id="contactUs"
           styles="group space-y-6 gap-8 text-sm py-5"
           inViewStyles="animate-to-right"
         >
@@ -106,6 +108,7 @@ const Footer = () => {
               @asthadentalclinic_
             </Link>
           </div>
+          <BookOnline />
         </InViewWrapper>
         <InViewWrapper
           as="div"

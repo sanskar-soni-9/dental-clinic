@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 const textareaMaxCharLength = 600;
@@ -8,9 +8,22 @@ const ContactUs = ({ closeContactUs }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [mobNumber, setMobNumber] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
+  const lastNameRef = useRef(null);
+  const emailRef = useRef(null);
+  const contactNumberRef = useRef(null);
+  const messageRef = useRef(null);
+
+  const handleEscape = useCallback((e) => {
+    if (e.key === "Escape") return closeContactUs();
+  }, [closeContactUs]);
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [handleEscape]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +31,7 @@ const ContactUs = ({ closeContactUs }) => {
       firstName,
       lastName,
       email,
-      mobNumber,
+      contactNumber,
       message,
     };
     setStatus("sending");
@@ -48,7 +61,10 @@ const ContactUs = ({ closeContactUs }) => {
       onClick={(e) => e.stopPropagation()}
       onSubmit={handleSubmit}
     >
-      <AiFillCloseCircle className="absolute top-5 right-5 w-12 h-12 text-teal-500 bg-gray-900 hover:scale-110 rounded-full cursor-pointer" onClick={closeContactUs} />
+      <AiFillCloseCircle
+        className="absolute top-5 right-5 w-12 h-12 text-teal-500 bg-gray-900 hover:scale-110 rounded-full cursor-pointer"
+        onClick={closeContactUs}
+      />
       <form className="flex flex-col gap-7 w-fit" autoComplete="on">
         <div className="flex flex-col sm:flex-row gap-5">
           <label className="space-y-1">
@@ -62,6 +78,12 @@ const ContactUs = ({ closeContactUs }) => {
               onChange={(e) => setFirstName(e.target.value)}
               className="rounded-xl px-3 py-2 bg-teal-100 text-sm text-slate-700 placeholder-slate-400 w-[85vw] sm:w-full"
               required={true}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  lastNameRef.current.focus();
+                }
+              }}
             />
           </label>
           <label className="space-y-1">
@@ -75,6 +97,13 @@ const ContactUs = ({ closeContactUs }) => {
               onChange={(e) => setLastName(e.target.value)}
               className="rounded-xl px-3 py-2 bg-teal-100 text-sm text-slate-700 placeholder-slate-400 w-[85vw] sm:w-full"
               required={true}
+              ref={lastNameRef}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  emailRef.current.focus();
+                }
+              }}
             />
           </label>
         </div>
@@ -86,6 +115,13 @@ const ContactUs = ({ closeContactUs }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="rounded-xl px-3 py-2 bg-teal-100 text-sm text-slate-700 placeholder-slate-400 w-[85vw] sm:w-full"
+            ref={emailRef}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                contactNumberRef.current.focus();
+              }
+            }}
           />
         </label>
         <label className="space-y-1">
@@ -94,13 +130,20 @@ const ContactUs = ({ closeContactUs }) => {
           </p>
           <input
             type="tel"
-            value={mobNumber}
+            value={contactNumber}
             placeholder="Contact No."
-            onChange={(e) => setMobNumber(e.target.value)}
+            onChange={(e) => setContactNumber(e.target.value)}
             className="rounded-xl px-3 py-2 bg-teal-100 text-sm text-slate-700 placeholder-slate-400 w-[85vw] sm:w-full"
             maxLength={13}
             required={true}
             minLength={10}
+            ref={contactNumberRef}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                messageRef.current.focus();
+              }
+            }}
           />
         </label>
         <label className="space-y-1">
@@ -116,6 +159,7 @@ const ContactUs = ({ closeContactUs }) => {
             placeholder="Message"
             maxLength={textareaMaxCharLength}
             required={true}
+            ref={messageRef}
           />
           <p className="text-end">{`${message.length}/${textareaMaxCharLength} characters`}</p>
         </label>

@@ -8,6 +8,7 @@ const InViewWrapper = ({
   outOfViewStyles,
   styles,
   rootMargin,
+  id,
 }) => {
   return (
     <InView rootMargin={rootMargin}>
@@ -16,6 +17,7 @@ const InViewWrapper = ({
           return (
             <WrapperComponent
               ref={ref}
+              id={id}
               className={`${styles} ${inView ? inViewStyles : outOfViewStyles}`}
             >
               {children}
@@ -24,6 +26,7 @@ const InViewWrapper = ({
         return (
           <div
             ref={ref}
+            id={id}
             className={`${styles} ${inView ? inViewStyles : outOfViewStyles}`}
           >
             {children}

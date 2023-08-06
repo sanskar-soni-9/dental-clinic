@@ -1,10 +1,12 @@
+"use client"
 import Link from "next/link";
+import Image from "next/image";
 import { BiMenuAltRight } from "react-icons/bi";
 
 const Header = () => {
   return (
-    <header className="overflow-hidden bg-teal-600 text-teal-50 py-6 px-4 text-lg font-medium flex justify-between">
-      <div />
+    <header className="overflow-hidden bg-teal-600 text-teal-50 py-4 px-8 text-lg font-medium flex justify-between items-center">
+      <Image src="/IMG92.png" alt="logo" width={100} height={100} />
       <div className="md:hidden bg-teal-50/40 rounded-lg p-1 cursor-pointer">
         <BiMenuAltRight className="w-7 h-7" />
       </div>
@@ -23,13 +25,13 @@ const Header = () => {
             <div className="h-0.5 bg-transparent peer-hover:bg-teal-50 w-0 peer-hover:w-full duration-500 delay-75 rounded-full" />
           </li>
           <li className="flex flex-col items-center justify-center pt-1">
-            <Link href="/about-us" className="peer">
+            <Link href="/#aboutUs" className="peer">
               About Us
             </Link>
             <div className="h-0.5 bg-transparent peer-hover:bg-teal-50 w-0 peer-hover:w-full duration-500 delay-75 rounded-full" />
           </li>
           <li className="flex flex-col items-center justify-center pt-1">
-            <Link href="/contact-us" className="peer">
+            <Link href="/#contactUs" className="peer">
               Contact Us
             </Link>
             <div className="h-0.5 bg-transparent peer-hover:bg-teal-50 w-0 peer-hover:w-full duration-500 delay-75 rounded-full" />
