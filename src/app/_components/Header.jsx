@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { BiMenuAltRight } from "react-icons/bi";
@@ -6,7 +6,9 @@ import { BiMenuAltRight } from "react-icons/bi";
 const Header = () => {
   return (
     <header className="overflow-hidden bg-teal-600 text-teal-50 py-4 px-8 text-lg font-medium flex justify-between items-center">
-      <Image src="/IMG92.png" alt="logo" width={100} height={100} />
+      <Link href="/">
+        <Image src="/logo.png" alt="logo" width={100} height={100} />
+      </Link>
       <div className="md:hidden bg-teal-50/40 rounded-lg p-1 cursor-pointer">
         <BiMenuAltRight className="w-7 h-7" />
       </div>
