@@ -57,7 +57,7 @@ const ContactUs = ({ closeContactUs }) => {
 
   return (
     <div
-      className="relative bg-gray-900 rounded-[50px] pt-20 pb-16 flex flex-col items-center w-full sm:w-[600px] text-teal-500 text-sm font-semibold"
+      className="relative bg-gray-900 rounded-[50px] pt-20 pb-16 flex flex-col items-center w-full sm:w-[600px] text-teal-500 text-sm font-semibold cursor-default"
       onClick={(e) => e.stopPropagation()}
       onSubmit={handleSubmit}
     >

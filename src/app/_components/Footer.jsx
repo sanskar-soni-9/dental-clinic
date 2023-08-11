@@ -113,7 +113,9 @@ const Footer = () => {
                 @asthadentalclinic_
               </Link>
             </div>
-            <BookOnline />
+            <div>
+              <BookOnline />
+            </div>
           </InViewWrapper>
           <InViewWrapper
             as="div"
