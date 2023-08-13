@@ -11,8 +11,8 @@ const AboutUs = () => {
         <InViewWrapper
           as="div"
           styles="relative whitespace-nowrap duration-700 ease-in-out mb-5"
-          inViewStyles="top-0"
-          outOfViewStyles="top-20"
+          inViewStyles="left-0"
+          outOfViewStyles="left-[20%]"
         >
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center">
             Our Clinic
@@ -22,8 +22,8 @@ const AboutUs = () => {
           <InViewWrapper
             as="p"
             styles="relative duration-700 ease-in-out"
-            inViewStyles="top-0"
-            outOfViewStyles="top-40"
+            inViewStyles="left-0"
+            outOfViewStyles="left-[20%]"
           >
             Astha Dental Clinic is a highly modernized and best dental clinic in
             Narmadapuram having an experienced lady dentist. If you are
@@ -32,10 +32,9 @@ const AboutUs = () => {
             complete care of oral hygiene at the most affordable rates.
           </InViewWrapper>
           <InViewWrapper
-            as="p"
             styles="hidden sm:block relative duration-700 ease-in-out"
-            inViewStyles="top-0"
-            outOfViewStyles="top-40"
+            inViewStyles="left-0"
+            outOfViewStyles="left-[20%]"
           >
             Our clinic is equipped with advanced technology and the latest
             equipments for teeth cleaning and whitening, tooth pain treatment,
@@ -48,10 +47,9 @@ const AboutUs = () => {
             specialist in providing complete dental care of the children.
           </InViewWrapper>
           <InViewWrapper
-            as="p"
             styles="relative duration-700 ease-in-out"
-            inViewStyles="top-0"
-            outOfViewStyles="top-10"
+            inViewStyles="left-0"
+            outOfViewStyles="left-[20%]"
           >
             Satisfaction of our patients is our motto.
           </InViewWrapper>

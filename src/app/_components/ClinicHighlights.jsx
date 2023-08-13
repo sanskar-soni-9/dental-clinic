@@ -62,7 +62,7 @@ const ClinicHighlights = () => {
         styles="relative whitespace-nowrap duration-700 ease-in-out mb-10"
         inViewStyles="top-0"
         outOfViewStyles="top-20"
-        rootMargin="0px 0px 200px 0px"
+        rootMargin="100px 0px 0px 0px"
       >
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center text-slate-700">
           Clinic Highlights
