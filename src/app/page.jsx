@@ -1,12 +1,13 @@
 import ClinicHighlights from "./_components/ClinicHighlights";
 import InViewWrapper from "./_components/InViewWrapper";
 import BookOnline from "./_components/BookOnline";
+import AboutUs from "./_components/AboutUs";
 
 const Home = () => {
   return (
-    <main className="flex flex-col gap-14 mb-14">
-      <section className="bg-[url('/display.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="w-screen h-[40vh] flex flex-col justify-center sm:h-screen bg-black/60 bg-gradient-to-r from-teal-600/40 to-transparent pl-[5vw] sm:pl-[10vw] gap-1 sm:gap-3 md:gap-6">
+    <main className="mb-14">
+      <section className="bg-[url('/display.jpg')] sm:bg-fixed bg-cover bg-bottom bg-no-repeat">
+        <div className="w-screen h-[80vh] sm:h-screen flex flex-col justify-center bg-black/60 bg-gradient-to-r from-teal-400/40 to-transparent pl-[5vw] sm:pl-[10vw] gap-1 sm:gap-3 md:gap-6">
           <div className="flex flex-col">
             <InViewWrapper
               as="strong"
@@ -32,7 +33,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section id="aboutUs" className="mb-10">
+        <AboutUs />
+      </section>
+      <section className="mb-20">
         <ClinicHighlights />
       </section>
     </main>

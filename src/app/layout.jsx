@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smoothmin-h-screen">
       <body
-        className={`${inter.className} text-slate-800 relative flex flex-col overflow-x-hidden min-h-screen`}
+        className={`${inter.className} text-slate-800 relative overflow-x-hidden min-h-screen`}
       >
         <Header />
         {children}

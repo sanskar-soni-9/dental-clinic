@@ -27,7 +27,7 @@ const highlights = [
     imageAlt: "tooth icon",
     imageWidth: "1154",
     imageHeight: "1124",
-    title: "Your Safety is Our Priority",
+    title: "Your Safety Is Our Priority",
     description:
       "Strict safety measures - PPE, sterilization, disinfection, water quality, waste disposal, air purification, & trained staff.",
     background: "bg-red-600",
@@ -37,7 +37,7 @@ const highlights = [
     imageAlt: "tooth icon",
     imageWidth: "1154",
     imageHeight: "1124",
-    title: "State-of-the-Art Equipment",
+    title: "State-Of-The-Art Equipment",
     description:
       "Electric handpiece, rotary endodontics, zoom whitening, intraoral camera. Your best smile awaits!",
     background: "bg-yellow-500",
@@ -47,7 +47,7 @@ const highlights = [
     imageAlt: "tooth icon",
     imageWidth: "1333",
     imageHeight: "1227",
-    title: "Modern dentistry at its finest",
+    title: "Modern Dentistry At Its Finest",
     description:
       "Digital X-rays & impressions for precise oral care. Embrace the future of dental technology!",
     background: "bg-purple-500",

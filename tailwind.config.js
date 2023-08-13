@@ -16,7 +16,7 @@ module.exports = {
             transform: "translateX(0)",
           },
         },
-         "left-to-right": {
+        "left-to-right": {
           from: {
             transform: "translateX(-100px)",
           },
@@ -24,10 +24,10 @@ module.exports = {
             transform: "translateX(0)",
           },
         },
-     },
+      },
       animation: {
         "to-left": "right-to-left 700ms",
-        "to-right": "left-to-right 700ms"
+        "to-right": "left-to-right 700ms",
       },
     },
   },
