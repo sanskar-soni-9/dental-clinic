@@ -1,52 +1,40 @@
 import Image from "next/image";
 import InViewWrapper from "./InViewWrapper";
+import ClinicHighlightImage from "@/public/clinic-highlights.jpg"
+import toothImg1 from "@/public/tooth1.png"
+import toothImg2 from "public/tooth2.png"
+import toothImg3 from "public/tooth3.png"
+import toothImg4 from "public/tooth4.png"
+import toothImg5 from "public/tooth5.png"
+
+const toothImgs = [toothImg1, toothImg2, toothImg3, toothImg4, toothImg5]
 
 const highlights = [
   {
-    imageSrc: "/tooth1.png",
-    imageAlt: "tooth icon",
-    imageWidth: "1154",
-    imageHeight: "1124",
     title: "SAME-DAY APPOINTMENTS",
     description:
       "Swift evaluation and treatment plans for urgent dental issues like tooth pain or broken teeth.",
     background: "bg-teal-600",
   },
   {
-    imageSrc: "/tooth2.png",
-    imageAlt: "tooth icon",
-    imageWidth: "1154",
-    imageHeight: "1124",
     title: "Expert Dental Specialists",
     description:
       "Expert dental care, dedicated specialists. Your smile, our priority!",
     background: "bg-sky-600",
   },
   {
-    imageSrc: "/tooth3.png",
-    imageAlt: "tooth icon",
-    imageWidth: "1154",
-    imageHeight: "1124",
     title: "Your Safety Is Our Priority",
     description:
       "Strict safety measures - PPE, sterilization, disinfection, water quality, waste disposal, air purification, & trained staff.",
     background: "bg-red-600",
   },
   {
-    imageSrc: "/tooth4.png",
-    imageAlt: "tooth icon",
-    imageWidth: "1154",
-    imageHeight: "1124",
     title: "State-Of-The-Art Equipment",
     description:
       "Electric handpiece, rotary endodontics, zoom whitening, intraoral camera. Your best smile awaits!",
     background: "bg-yellow-500",
   },
   {
-    imageSrc: "/tooth5.png",
-    imageAlt: "tooth icon",
-    imageWidth: "1333",
-    imageHeight: "1227",
     title: "Modern Dentistry At Its Finest",
     description:
       "Digital X-rays & impressions for precise oral care. Embrace the future of dental technology!",
@@ -75,10 +63,8 @@ const ClinicHighlights = () => {
           inViewStyles="animate-to-right"
         >
           <Image
-            src="/clinic-highlights.jpg"
+            src={ClinicHighlightImage}
             alt="clinic highlights display image"
-            width="900"
-            height="900"
             className="rounded-full w-full h-full"
           />
         </InViewWrapper>
@@ -97,10 +83,8 @@ const ClinicHighlights = () => {
                   className={`w-fit h-fit p-2 lg:p-3 rounded-full ${highlight.background}`}
                 >
                   <Image
-                    src={highlight.imageSrc}
-                    alt={highlight.imageAlt}
-                    width={highlight.imageWidth}
-                    height={highlight.imageHeight}
+                    src={toothImgs[index]}
+                    alt="tooth icon"
                     className="min-w-[30px] min-h-[30px] max-w-[30px] max-h-[30px] sm:min-w-[40px] sm:max-w-[40px] sm:max-h-[40px] sm:min-h-[40px] lg:min-w-[60px] lg:max-w-[60px] lg:max-h-[60px] lg:min-h-[60px]"
                   />
                 </div>

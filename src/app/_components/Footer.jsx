@@ -68,7 +68,7 @@ const Footer = () => {
                 target="_blank"
                 className="text-teal-100 group-hover/item:text-teal-200"
               >
-                QP3G+4QX, Astha dental clinic, Sadar Bazar, Narmadapuram, Madhya
+                Astha dental clinic, Sadar Bazar, Narmadapuram, Madhya
                 Pradesh 461001
               </Link>
             </div>
