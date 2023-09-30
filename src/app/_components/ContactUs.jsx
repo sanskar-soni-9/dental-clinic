@@ -62,7 +62,7 @@ const ContactUs = ({ closeContactUs }) => {
       onSubmit={handleSubmit}
     >
       <AiFillCloseCircle
-        className="absolute top-5 right-5 w-12 h-12 text-teal-500 bg-gray-900 hover:scale-110 rounded-full cursor-pointer"
+        className="absolute top-5 right-5 w-12 h-12 text-teal-500 bg-gray-900 border-2 border-transparent hover:border-teal-500 rounded-full cursor-pointer"
         onClick={closeContactUs}
       />
       <form className="flex flex-col gap-7 w-fit" autoComplete="on">
