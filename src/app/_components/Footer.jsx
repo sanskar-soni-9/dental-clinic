@@ -6,38 +6,12 @@ import {
   MdArrowForwardIos,
 } from "react-icons/md";
 import { FaPhoneFlip, FaInstagram } from "react-icons/fa6";
+
 import CopyTextToClipboard from "./CopyTextToClipboard";
 import InViewWrapper from "./InViewWrapper";
 import BookOnline from "./BookOnline";
 import Map from "./Map";
-
-const availableHours = [
-  { day: "Sunday", time: "11am - 2pm" },
-  { day: "Monday", time: "11am - 8pm" },
-  { day: "Tuesday", time: "11am - 8pm" },
-  { day: "Wednesday", time: "11am - 8pm" },
-  { day: "Thursday", time: "11am - 8pm" },
-  { day: "Friday", time: "11am - 8pm" },
-  { day: "Saturday", time: "11am - 8pm" },
-];
-
-const services = [
-  { service: "Teeth Whitening" },
-  { service: "Dental Implants" },
-  { service: "Digital Dental X-ray" },
-  { service: "Root Canal Treatment" },
-  { service: "Maxillofacial Surgeries" },
-  { service: "Oral Prophylaxis" },
-  { service: "Crown / Bridges" },
-  { service: "Veneers" },
-  { service: "Dental Restoration" },
-  { service: "Denture" },
-  { service: "Teeth Reshaping" },
-  { service: "Laser Dentistry" },
-  { service: "Orthodontic Treatment" },
-  { service: "Mouth Guards" },
-  { service: "Online Follow-up" },
-];
+import { services, availableHours } from "../constants";
 
 const Footer = () => {
   return (
@@ -68,8 +42,8 @@ const Footer = () => {
                 target="_blank"
                 className="text-teal-100 group-hover/item:text-teal-200"
               >
-                Astha dental clinic, Sadar Bazar, Narmadapuram, Madhya
-                Pradesh 461001
+                Astha dental clinic, Sadar Bazar, Narmadapuram, Madhya Pradesh
+                461001
               </Link>
             </div>
             <div className="flex gap-5 items-center group/item">
@@ -171,8 +145,8 @@ const Footer = () => {
                 {services.map((service, index) => {
                   if (index > (services.length - 1) / 2) return "";
                   return (
-                    <p key={index} className="hover:text-teal-200">
-                      {service.service}
+                    <p key={service.id} className="hover:text-teal-200">
+                      {service.name}
                     </p>
                   );
                 })}
@@ -181,8 +155,8 @@ const Footer = () => {
                 {services.map((service, index) => {
                   if (index <= (services.length - 1) / 2) return "";
                   return (
-                    <p key={index} className="hover:text-teal-200">
-                      {service.service}
+                    <p key={service.id} className="hover:text-teal-200">
+                      {service.name}
                     </p>
                   );
                 })}
