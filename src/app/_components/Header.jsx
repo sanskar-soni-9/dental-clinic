@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import logo from "public/logo.png";
 import { BiMenuAltRight } from "react-icons/bi";
 
-import { services } from "../constants";
+import { services } from "../data.js";
 
 const Header = () => {
+  const path = usePathname();
+
   return (
     <header className="bg-teal-600 text-teal-50 py-4 px-8 text-lg font-medium flex justify-between items-center">
       <Link href="/">
@@ -18,19 +21,29 @@ const Header = () => {
       <nav className="hidden md:block">
         <ul className="flex z-50 gap-12 justify-end">
           <li className="flex flex-col items-center justify-center pt-1">
-            <Link href="/" className="peer">
+            <Link
+              href="/"
+              className={`peer ${path === "/" ? "text-teal-100" : ""}`}
+            >
               Home
             </Link>
-            <div className="h-0.5 bg-transparent peer-hover:bg-teal-50 w-0 peer-hover:w-full duration-500 delay-75 rounded-full" />
+            <div className="h-0.5 bg-teal-50 w-0 peer-hover:w-full duration-500 delay-75 rounded-full" />
           </li>
           <li className="flex flex-col items-center justify-center pt-1 group/services relative">
-            <Link href="/services">Services</Link>
+            <Link
+              href="/service"
+              className={
+                path.match("^/service(/[w-]*)?") ? "text-teal-100" : ""
+              }
+            >
+              Services
+            </Link>
             <div className="h-0.5 bg-transparent group-hover/services:bg-teal-50 w-0 group-hover/services:w-full duration-500 delay-75 rounded-full" />
             <div className="absolute bg-white text-gray-800 top-full group-hover/services:block text-sm whitespace-nowrap border-4 border-teal-600 rounded-xl hidden">
               {services.map((service) => (
                 <Link
                   key={service.id}
-                  href={`/services/${service.id}`}
+                  href={`/service/${service.id}`}
                   className="block py-3 px-4 hover:text-teal-600 hover:bg-teal-100 first:rounded-t-xl last:rounded-b-xl"
                 >
                   {service.name}

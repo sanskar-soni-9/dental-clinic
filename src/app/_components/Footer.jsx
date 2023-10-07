@@ -1,17 +1,17 @@
 import Link from "next/link";
 import {
   MdAddLocationAlt,
-  MdPhoneIphone,
-  MdMail,
   MdArrowForwardIos,
+  MdMail,
+  MdPhoneIphone,
 } from "react-icons/md";
-import { FaPhoneFlip, FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaPhoneFlip } from "react-icons/fa6";
 
 import CopyTextToClipboard from "./CopyTextToClipboard";
 import InViewWrapper from "./InViewWrapper";
 import BookOnline from "./BookOnline";
 import Map from "./Map";
-import { services, availableHours } from "../constants";
+import { availableHours, services } from "../data.js";
 
 const Footer = () => {
   return (
@@ -110,10 +110,10 @@ const Footer = () => {
                 <MdArrowForwardIos /> <p>Home</p>
               </Link>
               <Link
-                href="/patient-information"
+                href="/service"
                 className="flex items-center text-teal-100 gap-4 hover:text-teal-600 font-semibold"
               >
-                <MdArrowForwardIos /> <p>Patient Information</p>
+                <MdArrowForwardIos /> <p>Services</p>
               </Link>
               <Link
                 href="/about-us"
@@ -145,9 +145,13 @@ const Footer = () => {
                 {services.map((service, index) => {
                   if (index > (services.length - 1) / 2) return "";
                   return (
-                    <p key={service.id} className="hover:text-teal-200">
+                    <Link
+                      href={`/service/${service.id}`}
+                      key={service.id}
+                      className="block hover:text-teal-200"
+                    >
                       {service.name}
-                    </p>
+                    </Link>
                   );
                 })}
               </div>
@@ -155,9 +159,13 @@ const Footer = () => {
                 {services.map((service, index) => {
                   if (index <= (services.length - 1) / 2) return "";
                   return (
-                    <p key={service.id} className="hover:text-teal-200">
+                    <Link
+                      href={`/service/${service.id}`}
+                      key={service.id}
+                      className="block hover:text-teal-200"
+                    >
                       {service.name}
-                    </p>
+                    </Link>
                   );
                 })}
               </div>
