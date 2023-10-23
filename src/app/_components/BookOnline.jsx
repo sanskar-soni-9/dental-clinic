@@ -3,7 +3,7 @@ import { useState } from "react";
 import PrimaryButton from "./PrimaryButton";
 import ContactUs from "./ContactUs";
 
-const BookOnline = () => {
+const BookOnline = ({ isDark }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,6 +14,7 @@ const BookOnline = () => {
           setIsOpen(true);
           document.body.classList.add("overflow-y-hidden");
         }}
+        isDark={isDark}
       />
       {isOpen && (
         <div
