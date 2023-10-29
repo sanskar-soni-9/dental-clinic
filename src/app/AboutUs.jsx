@@ -1,4 +1,4 @@
-import InViewWrapper from "./InViewWrapper";
+import InViewWrapper from "@/utils/InViewWrapper";
 
 const AboutUs = () => {
   return (

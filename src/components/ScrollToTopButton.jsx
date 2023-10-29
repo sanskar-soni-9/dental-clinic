@@ -1,6 +1,6 @@
 "use client";
-import { PiArrowFatLineUpFill } from "react-icons/pi";
 import { useEffect, useState } from "react";
+import { PiArrowFatLineUpFill } from "react-icons/pi";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);

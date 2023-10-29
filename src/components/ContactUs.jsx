@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 const textareaMaxCharLength = 600;

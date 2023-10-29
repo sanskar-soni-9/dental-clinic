@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
-import { services } from "../../data.js";
-import InViewWrapper from "../../_components/InViewWrapper.jsx";
+
+import InViewWrapper from "@/utils/InViewWrapper.jsx";
+import { services } from "@/utils/data.js";
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -18,7 +19,7 @@ const Service = ({ params }) => {
   return (
     <InViewWrapper
       as="main"
-      styles="py-2 text-slate-600 traking-wider duration-1000 ease-in-out"
+      styles="py-2 text-slate-600 traking-wider duration-1000 ease-in-out space-y-6"
       inViewStyles="opacity-100"
       outOfViewStyles="opacity-0"
     >
@@ -26,10 +27,10 @@ const Service = ({ params }) => {
         <h1 className="font-semibold text-3xl sm:text-4xl">{service.name}</h1>
         <p>{service.description}</p>
       </div>
-      <div>
+      <div className="space-y-6">
         {service.sections.map((section, index) => (
           <div className="mb-6" key={index}>
-            <h2 className="font-semibold mb-0.5 text-xl">{section.title}</h2>
+            <h2 className="font-semibold text-xl">{section.title}</h2>
             <p>{section.description}</p>
           </div>
         ))}

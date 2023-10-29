@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import PrimaryButton from "./PrimaryButton";
 import ContactUs from "./ContactUs";
+import PrimaryButton from "./PrimaryButton";
 
 const BookOnline = ({ isDark }) => {
   const [isOpen, setIsOpen] = useState(false);

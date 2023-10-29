@@ -1,11 +1,13 @@
 import Image from "next/image";
-import InViewWrapper from "./InViewWrapper";
-import ClinicHighlightImage from "@/public/clinic-highlights.jpg"
-import toothImg1 from "@/public/tooth1.png"
-import toothImg2 from "public/tooth2.png"
-import toothImg3 from "public/tooth3.png"
-import toothImg4 from "public/tooth4.png"
-import toothImg5 from "public/tooth5.png"
+
+import ClinicHighlightImage from "@/public/clinic-highlights.jpg";
+import InViewWrapper from "@/utils/InViewWrapper";
+
+import toothImg1 from "@/public/tooth1.png";
+import toothImg2 from "@/public/tooth2.png";
+import toothImg3 from "@/public/tooth3.png";
+import toothImg4 from "@/public/tooth4.png";
+import toothImg5 from "@/public/tooth5.png";
 
 const toothImgs = [toothImg1, toothImg2, toothImg3, toothImg4, toothImg5]
 

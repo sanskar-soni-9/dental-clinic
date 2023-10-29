@@ -1,17 +1,17 @@
 import Link from "next/link";
-import {
-  MdAddLocationAlt,
-  MdArrowForwardIos,
-  MdMail,
-  MdPhoneIphone,
-} from "react-icons/md";
 import { FaInstagram, FaPhoneFlip } from "react-icons/fa6";
+import {
+    MdAddLocationAlt,
+    MdArrowForwardIos,
+    MdMail,
+    MdPhoneIphone,
+} from "react-icons/md";
 
-import CopyTextToClipboard from "./CopyTextToClipboard";
-import InViewWrapper from "./InViewWrapper";
+import InViewWrapper from "@/utils/InViewWrapper";
+import { availableHours, services } from "@/utils/data.js";
 import BookOnline from "./BookOnline";
+import CopyTextToClipboard from "./CopyTextToClipboard";
 import Map from "./Map";
-import { availableHours, services } from "../data.js";
 
 const Footer = () => {
   return (

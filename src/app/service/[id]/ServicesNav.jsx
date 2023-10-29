@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { RiCheckboxBlankCircleFill } from "react-icons/ri";
-import { BsArrowRight } from "react-icons/bs";
 import { useParams } from "next/navigation";
+import { BsArrowRight } from "react-icons/bs";
+import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 
 const ServicesNav = ({ services }) => {
   const { id } = useParams();
