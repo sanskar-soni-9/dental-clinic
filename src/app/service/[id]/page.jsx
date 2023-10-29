@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
+import Link from "next/link";
 
 import InViewWrapper from "@/utils/InViewWrapper.jsx";
 import { services } from "@/utils/data.js";
@@ -23,6 +25,12 @@ const Service = ({ params }) => {
       inViewStyles="opacity-100"
       outOfViewStyles="opacity-0"
     >
+      <Link href={service.sourceUrl} target="_blank" className="relative block group/serviceImage">
+        <Image src={service.image} alt={service.name + " Image"} width={1000} height={800} className="w-full h-auto" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black/20 text-white hidden group-hover/serviceImage:flex">
+          <p className="w-full text-end self-end text-sm">{service.source}</p>
+        </div>
+      </Link>
       <div className="mb-5 space-y-4">
         <h1 className="font-semibold text-3xl sm:text-4xl">{service.name}</h1>
         <p>{service.description}</p>

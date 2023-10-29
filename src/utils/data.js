@@ -12,6 +12,9 @@ export const services = [
   {
     name: "Teeth Whitening",
     id: "teeth-whitening",
+    image: "/services/teeth-whitening.jpg",
+    source: "Image by Racool_studio on Freepik",
+    sourceUrl: "https://www.freepik.com/free-photo/white-teeth_6190926.htm#page=5&query=teeth%20whitening&position=22&from_view=search&track=ais",
     description:
       "Dazzle yourself with a brighter, younger-looking smile with teeth whitening. Our experienced dentists will work with you to achieve the best possible results.",
     sections: [
@@ -45,6 +48,9 @@ export const services = [
   {
     name: "Dental Implants",
     id: "dental-implants",
+    image: "/services/dental-implants.jpg",
+    source: "Photo by Jonathan Borba on Unsplash",
+    sourceUrl: "https://unsplash.com/@jonathanborba?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "A Safe and Effective Solution for Missing Teeth. For particularly catastrophic incidents, you may find yourself needing to replace an entire tooth. Thankfully, dental implants are a safe and effective solution for missing teeth. Dental implants are tiny titanium posts that are surgically placed in the jawbone. Over time, the bone fuses with the implant, creating a strong foundation for a replacement tooth.",
     sections: [
@@ -73,6 +79,9 @@ export const services = [
   {
     name: "Digital Dental X-ray",
     id: "dental-xray",
+    image: "/services/dental-xray.jpg",
+    source: "Image by KamranAydinov on Freepik",
+    sourceUrl: "https://www.freepik.com/free-photo/dentist-examines-x-ray-photo-teeths_7607641.htm#query=dental%20xray&position=1&from_view=search&track=ais",
     description:
       "Astha Dental Clinic is proud to offer digital dental x-rays to our patients. Digital x-rays are a safe and effective way to image your teeth and gums.",
     sections: [
@@ -86,6 +95,9 @@ export const services = [
   {
     name: "Root Canal Treatment",
     id: "root-canal",
+    image: "/services/root-canal.jpg",
+    source: "Image by prostooleh on Freepik",
+    sourceUrl: "https://www.freepik.com/free-photo/model-tooth-dentist-doctor-shows-patient-tooth-reception-dentist-s-office_10706473.htm#query=root%20canal&position=0&from_view=search&track=ais",
     description:
       "Root Canal Treatment (RCT) is a dental procedure that becomes necessary when the inner pulp of a tooth becomes infected or damaged due to decay, injury, or trauma. This treatment is crucial in saving a severely damaged tooth from extraction. During the procedure, the infected pulp is removed, and the inside of the tooth is carefully cleaned, disinfected, and sealed, preventing further infections.",
     sections: [
@@ -114,6 +126,9 @@ export const services = [
   {
     name: "Maxillofacial Surgeries",
     id: "maxillofacial-surgeries",
+    image: "/services/maxillofacial-surgeries.jpg",
+    source: "Image by jcomp on Freepik",
+    sourceUrl: "https://www.freepik.com/free-photo/dental-equipment-placed-table_6170464.htm#query=dental%20equipments&position=4&from_view=search&track=ais",
     description:
       "Maxillofacial surgeries encompass a broad range of procedures that address issues related to the face, jaw, neck, and oral cavity. These surgeries are performed by skilled oral and maxillofacial surgeons to correct deformities, treat diseases, and restore functionality and aesthetics to the maxillofacial area.",
     sections: [
@@ -137,6 +152,9 @@ export const services = [
   {
     name: "Oral Prophylaxis",
     id: "oral-prophylaxis",
+    image: "/services/oral-prophylaxis.jpg",
+    source: "Photo by Kamal Hoseinianzade on Unsplash",
+    sourceUrl: "https://unsplash.com/@teravis_sk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "Oral prophylaxis, also known as professional teeth cleaning, is a dental procedure that removes plaque and tartar from the teeth and gums. Plaque is a sticky film of bacteria that forms on the teeth and gums. Tartar is hardened plaque that can build up and irritate the gums, leading to inflammation and gum disease.",
     sections: [
@@ -165,6 +183,9 @@ export const services = [
   {
     name: "Crown / Bridges",
     id: "crown-bridges",
+    image: "/services/crown-bridges.jpg",
+    source: "Photo by Diana Polekhina on Unsplash",
+    sourceUrl: "https://unsplash.com/@diana_pole?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "Crowns and bridges are two types of dental restorations that can be used to restore the function and appearance of damaged or missing teeth. Crowns are caps that cover the entire tooth, while bridges are fixed appliances that replace one or more missing teeth.",
     sections: [
@@ -198,6 +219,9 @@ export const services = [
   {
     name: "Veneers",
     id: "veeners",
+    image: "/services/veneers.jpg",
+    source: "Photo by Ozkan Guner on Unsplash",
+    sourceUrl: "https://unsplash.com/@dentistozkanguner?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "Veneers are thin shells of tooth-colored material that are bonded to the front of teeth to improve their appearance.",
     sections: [
@@ -226,6 +250,9 @@ export const services = [
   {
     name: "Dental Restoration",
     id: "restoration",
+    image: "/services/dental-restoration.jpg",
+    source: "Photo by Ozkan Guner on Unsplash",
+    sourceUrl: "https://unsplash.com/@dentistozkanguner?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "Dental restoration is the process of repairing or replacing damaged or missing teeth. Dental restorations can be made from a variety of materials, including metal, porcelain, and composite resin. The best type of restoration for you will depend on your individual needs and preferences.",
     sections: [
@@ -254,6 +281,9 @@ export const services = [
   {
     name: "Denture",
     id: "denture",
+    image: "/services/denture.jpg",
+    source: "Photo by Enis Yavuz on Unsplash",
+    sourceUrl: "https://unsplash.com/@enisyavuz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "Dentures are removable or fixed prosthetic devices used to replace missing teeth and surrounding tissue. Dentures can be used to replace some or all of the teeth in either the upper or lower jaw, depending on the individual's needs. Dentures are custom-made to fit each individual's mouth, and they are designed to look and function like natural teeth.",
     sections: [
@@ -287,6 +317,9 @@ export const services = [
   {
     name: "Teeth Reshaping",
     id: "teeth-reshaping",
+    image: "/services/teeth-reshaping.jpg",
+    source: "Image by jcomp on Freepik",
+    sourceUrl: "https://www.freepik.com/free-photo/dentists-treat-patients-teeth_6170497.htm#query=Maxillofacial%20Surgeries&position=8&from_view=search&track=ais",
     description:
       "Teeth reshaping, also known as dental contouring, is a cosmetic dental procedure that can improve the appearance of your smile by changing the shape or size of your teeth. It is a relatively quick and painless procedure.",
     sections: [
@@ -310,6 +343,9 @@ export const services = [
   {
     name: "Laser Dentistry",
     id: "laser-dentistry",
+    image: "/services/laser-dentistry.jpg",
+    source: "Image by wavebreakmedia_micro on Freepik",
+    sourceUrl: "https://www.freepik.com/free-photo/dentist-examining-patients-teeth-with-dental-curing-light_8896122.htm#query=laser%20dentistry&position=6&from_view=search&track=ais",
     description:
       "Laser dentistry is a type of dental treatment that uses lasers instead of traditional dental tools, such as drills and scalpels. Lasers are highly concentrated beams of light that can be used to cut, vaporize, or ablate tissue.",
     sections: [
@@ -328,6 +364,9 @@ export const services = [
   {
     name: "Orthodontic Treatment",
     id: "orthodontic-treatment",
+    image: "/services/orthodontic.jpg",
+    source: "Photo by Kenny Eliason on Unsplash",
+    sourceUrl: "https://unsplash.com/@neonbrand?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "Orthodontic treatment is a specialized branch of dentistry that focuses on the diagnosis, prevention, management, and correction of malpositioned teeth and jaws. Orthodontic treatment can improve the appearance of your smile, but it can also improve your oral health and function.",
     sections: [
@@ -356,6 +395,9 @@ export const services = [
   {
     name: "Mouth Guards",
     id: "mouth-guards",
+    image: "/services/mouth-guards.jpg",
+    source: "Photo by Enis Yavuz on Unsplash",
+    sourceUrl: "https://unsplash.com/@enisyavuz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash",
     description:
       "Mouth guards, also known as mouth protectors, sports guards, or gumshields, are devices worn over the teeth to protect them from injury. Mouth guards are typically made of soft, flexible material, such as rubber or silicone. They can be either custom-made by a dentist or purchased over-the-counter.",
     sections: [
@@ -384,6 +426,9 @@ export const services = [
   {
     name: "Online Follow-up",
     id: "online-follow-up",
+    image: "/services/online-follow-up.jpg",
+    source: "Image by Racool_studio on Freepik",
+    sourceUrl: "https://www.freepik.com/free-photo/white-teeth_6190929.htm#query=denture&position=6&from_view=search&track=sph",
     description:
       "Our online follow-up options are designed to make it easy for you to get the care you need when you need it. Whether you have a question about your medication, need to schedule a follow-up appointment, or want to discuss your test results, we are here to help.Contact us to schedule an online follow-up appointment.",
     sections: [{
